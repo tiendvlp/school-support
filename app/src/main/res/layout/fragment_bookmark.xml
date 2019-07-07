@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".view.fragment.FragmentBookmark">
+    <data class="com.teamttdvlp.goodthanbefore.schoolsupport.databinding.fragment.BookMarkFragmentBinding">
+        <variable name="viewModel" type="com.teamttdvlp.goodthanbefore.schoolsupport.viewmodel.fragment.BookmarkFragmentViewModel"/>
+    </data>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:gravity="center_horizontal" android:text="Bookmarks" android:textSize="17sp"
+            android:paddingTop="11dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" android:id="@+id/textView8"
+            android:background="#000000"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_post"/>
+</LinearLayout>
+</layout>

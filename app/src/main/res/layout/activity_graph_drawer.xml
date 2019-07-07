@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".view.activity.GraphDrawerActivity"
+>
+    <data class="com.teamttdvlp.goodthanbefore.schoolsupport.databinding.activity.GraphDrawerActivityBinding" >
+        <variable name="viewModel" type="com.teamttdvlp.goodthanbefore.schoolsupport.viewmodel.activity.GraphDrawerActivityViewModel"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   >
+
+    <com.teamttdvlp.goodthanbefore.schoolsupport.customview.GraphDrawer
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/normal_graph_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.teamttdvlp.goodthanbefore.schoolsupport.customview.ExtremeAndSolutionDrawer
+        android:id="@+id/graph_extreme_n_solution"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/normal_graph_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center"
+            android:id="@+id/normal_graph_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="@drawable/background_options_drawgraph"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageButton
+                android:id="@+id/graph_btn_setting"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/setting_icon"
+                android:layout_marginEnd="60dp"/>
+
+        <ImageButton
+                android:id="@+id/graph_btn_solution"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/a_solution_button"
+                android:layout_marginEnd="60dp"/>
+
+        <ImageButton
+                android:id="@+id/graph_btn_extreme"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/a_extreme_button"
+                android:layout_marginEnd="60dp"/>
+
+        <ImageButton
+                android:id="@+id/graph_btn_graph_info"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/a_info_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.251"
+                app:layout_constraintStart_toEndOf="@+id/graph_btn_setting"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
+
+        <ImageButton
+                android:id="@+id/graph_btn_back"
+                android:layout_width="32dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/a_back_button_no_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toEndOf="@+id/graph_btn_graph_info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" android:visibility="gone"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:id="@+id/graph_setting_form"
+        android:layout_width="248dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/a_graph_setting_background"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/normal_graph_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="144dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Zoom"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_field_for_special_graph"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/graph_btn_minus_zoom"
+                    android:layout_width="15dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/a_minus_button" />
+
+                <TextView
+                    android:id="@+id/graph_txt_zoom_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/graph_btn_plus_zoom"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right|center|end"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/a_plus_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="144dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Start X"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_field_for_special_graph"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/graph_btn_minus_start_x"
+                    android:layout_width="15dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/a_minus_button" />
+
+                <TextView
+                    android:id="@+id/graph_txt_start_x_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="-15"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/graph_btn_plus_start_x"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right|center|end"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/a_plus_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="144dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="End X"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_field_for_special_graph"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/graph_btn_minus_end_x"
+                    android:layout_width="15dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/a_minus_button" />
+
+                <TextView
+                    android:id="@+id/graph_txt_end_x_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="15"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/graph_btn_plus_end_x"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right|center|end"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/a_plus_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/graph_info_form"
+        android:layout_width="wrap_content"
+        android:layout_height="303dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/a_graph_properties_background"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/graph_setting_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/graph_txt_solution_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:text="Số nghiệm: 1"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/graph_lv_solutions"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:text="Số nghiệm: " />
+
+        <TextView
+            android:id="@+id/graph_txt_extreme_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:text="Số điểm cực trị: 0"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/graph_lv_extreme"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:text="Số nghiệm: " />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

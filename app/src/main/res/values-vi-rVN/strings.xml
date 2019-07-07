@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SchoolSupport</string>
+    <string name="interest_error_text">Đã xảy ra lỗi. Vui lòng kiểm tra lại kết nối</string>
+    <string name="skip_choosing_interest">Bỏ qua và làm việc offline</string>
+</resources>

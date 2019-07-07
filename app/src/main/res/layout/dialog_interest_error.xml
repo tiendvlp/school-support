@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="112dp" android:id="@+id/textView6" android:paddingTop="5dp"
+            android:paddingLeft="10dp" android:text="@string/interest_error_text" android:background="#ffffff"
+            android:textSize="16sp"/>
+
+    <TextView
+            android:text="@string/skip_choosing_interest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_skip_and_work_offline"
+            android:gravity="center|right"
+            android:textSize="16sp"
+            android:background="@color/blue_cyan"
+            android:textAllCaps="false" android:paddingBottom="10dp"
+            android:paddingTop="10dp" android:textColor="#ffffff" android:paddingRight="10dp"/>
+</LinearLayout>

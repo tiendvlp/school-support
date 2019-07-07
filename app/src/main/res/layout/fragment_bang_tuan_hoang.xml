@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".view.fragment.FragmentBangTuanHoang">
+    <data class="com.teamttdvlp.goodthanbefore.schoolsupport.databinding.fragment.BangTuanHoangFragmentBinding">
+        <variable name="viewModel" type="com.teamttdvlp.goodthanbefore.schoolsupport.viewmodel.activity.BangTuanHoanActivityViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <HorizontalScrollView
+                android:id="@+id/bth_hor_gridview_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="-30dp"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <GridView
+                            android:id="@+id/btn_hor_gridview"
+                            android:layout_width="1586dp"
+                            android:layout_height="fill_parent"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="3dp"
+                            android:horizontalSpacing="8dp"
+                            android:layout_marginLeft="0dp"
+                            android:numColumns="20"
+                            android:background="@color/bright_yellow">
+                    </GridView>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

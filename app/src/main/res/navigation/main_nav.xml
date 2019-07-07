@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_nav" app:startDestination="@id/main_nav_fragment_global">
+
+    <fragment android:id="@+id/main_nav_fragment_global"
+              android:name="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.GlobalFragment"
+              android:label="FragmentNewStories" tools:layout="@layout/fragment_tool"/>
+    <fragment android:id="@+id/main_nav_fragment_local"
+              android:name="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.LocalFragment"
+              android:label="FragmentNewStories"/>
+    <fragment android:id="@+id/main_nav_fragment_tool"
+              android:name="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.ToolFragment"
+              android:label="FragmentNewStories"/>
+    <fragment android:id="@+id/main_nav_fragment_bookmarks"
+              android:name="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.BookmarksFragment"
+              android:label="FragmentNewStories"/>
+</navigation>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SchoolSupport</string>
+    <string name="facebook_app_id" translatable="false">590991834702617</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb590991834702617</string>
+    <string name="client_id" translatable="false">
+        1033670176766-gm14ic64js4e9h5jhm6l341vhjvklfr4.apps.googleusercontent.com
+    </string>
+    <string name="interest_error_text">Error happened. Please check network connection</string>
+    <string name="skip_choosing_interest">Skip and work offline</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

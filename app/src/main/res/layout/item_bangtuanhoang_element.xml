@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="83dp"
+        android:layout_height="108dp"
+        android:background="@drawable/green"
+        android:paddingEnd="8dp"
+        android:paddingStart="2dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="7dp">
+
+    <TextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_chem_position"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="3dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColor="#000000"/>
+
+    <TextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_chem_symbol"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="18sp"
+            android:textColor="#000000" tools:text="Al"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/item_chem_position"
+            app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+            android:text="240"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="3dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            android:textColor="#000000"
+            android:layout_marginEnd="4dp"
+            android:id="@+id/item_chem_mass"/>
+
+    <TextView
+            android:text="0.44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:layout_marginEnd="4dp"
+            android:id="@+id/item_chem_ele_negative"
+            android:layout_marginTop="9dp"
+            app:layout_constraintTop_toBottomOf="@+id/item_chem_mass"
+            app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+            android:text="Aluminat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            android:layout_marginEnd="4dp"
+            android:id="@+id/item_chem_txt_name"
+            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="8sp"
+            android:textColor="#000000"
+            android:id="@+id/item_chem_txt_electron_config"
+            app:layout_constraintTop_toBottomOf="@+id/item_chem_txt_name"
+            app:layout_constraintVertical_bias="0.451"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.357"
+            android:text="[Xe] 4f145d106s26p1" android:layout_marginBottom="8dp" android:gravity="center_horizontal"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="8sp"
+            android:textColor="#000000"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/item_chem_oxydation_numbers"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/item_chem_txt_electron_config"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.375"
+            android:layout_marginBottom="2dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_end="36dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1033670176766",
+    "firebase_url": "https://schoolsupporttestversion.firebaseio.com",
+    "project_id": "schoolsupporttestversion",
+    "storage_bucket": "schoolsupporttestversion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033670176766:android:d5f7c737267f56b1",
+        "android_client_info": {
+          "package_name": "com.teamttdvlp.goodthanbefore.schoolsupport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033670176766-gm14ic64js4e9h5jhm6l341vhjvklfr4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCOawbwOrMum2oosyfJ9O_4pt39R0LnkU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

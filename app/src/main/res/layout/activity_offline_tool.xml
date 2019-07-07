@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        android:id="@+id/activity_tool_offline"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".view.activity.OfflineToolActivity">
+    <data class = "com.teamttdvlp.goodthanbefore.schoolsupport.databinding.activity.ToolOfflineActivityBinding">
+    </data>
+<FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <fragment
+            tools:layout="@layout/activity_offline_tool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.ToolFragment">
+    </fragment>
+
+</FrameLayout>
+</layout>

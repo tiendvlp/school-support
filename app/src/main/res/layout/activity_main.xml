@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data class="com.teamttdvlp.goodthanbefore.schoolsupport.databinding.activity.MainActivityBinding">
+        <variable name="viewModel" type="com.teamttdvlp.goodthanbefore.schoolsupport.viewmodel.activity.MainActivityViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:background="#ffffff">
+    <RadioGroup
+            android:background="#000000"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/radioGroup">
+
+        <com.teamttdvlp.goodthanbefore.schoolsupport.customview.RadioButton
+                android:id="@+id/rbtn_global"
+                android:layout_marginRight="55dp"
+                app:checked_bg="@drawable/rbtn_global_clicked"
+                app:unchecked_bg="@drawable/rbtn_global"
+                android:background="@drawable/rbtn_global_clicked"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        <com.teamttdvlp.goodthanbefore.schoolsupport.customview.RadioButton
+                android:id="@+id/rbtn_local"
+                android:visibility="gone"
+                android:layout_marginRight="55dp"
+                app:checked_bg="@drawable/rbtn_local_clicked"
+                app:unchecked_bg="@drawable/rbtn_local"
+                android:background="@drawable/rbtn_local"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        <com.teamttdvlp.goodthanbefore.schoolsupport.customview.RadioButton
+                android:id="@+id/rbtn_new_stories"
+                android:layout_marginRight="55dp"
+                app:checked_bg="@drawable/btn_new_stories_clicked"
+                app:unchecked_bg="@drawable/btn_new_stories"
+                android:background="@drawable/btn_new_stories"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        <com.teamttdvlp.goodthanbefore.schoolsupport.customview.RadioButton
+                android:id="@+id/rbtn_tool"
+                android:layout_marginRight="55dp"
+                app:checked_bg="@drawable/rbtn_tool_tab"
+                app:unchecked_bg="@drawable/rbtn_tool_tab_clicked"
+                android:background="@drawable/rbtn_tool_tab_clicked"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        <com.teamttdvlp.goodthanbefore.schoolsupport.customview.RadioButton
+                android:id="@+id/rbtn_bookmarks"
+                app:checked_bg="@drawable/rbtn_bookmark_tab_clicked"
+                app:unchecked_bg="@drawable/rbtn_bookmark_tab"
+                android:background="@drawable/rbtn_bookmark_tab"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+
+    </RadioGroup>
+    <fragment
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" app:navGraph="@navigation/main_nav"
+            app:defaultNavHost="true"
+            android:id="@+id/main_nav_host"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

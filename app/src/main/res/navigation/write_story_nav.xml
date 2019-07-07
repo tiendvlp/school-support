@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/write_story_nav" app:startDestination="@id/WriteFragment">
+    <fragment android:id="@+id/WriteFragment"
+              android:name="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.WriteStoryFragment"
+              tools:layout="@layout/fragment_write_story">
+        <argument android:name="name" android:defaultValue="abc"/>
+    </fragment>
+
+    <fragment android:id="@+id/SubmitFragment"
+              android:name="com.teamttdvlp.goodthanbefore.schoolsupport.view.fragment.SubmitStoryFragment"
+              android:label="FragmentSubmit"
+              tools:layout="@layout/fragment_submit_story"/>
+</navigation>

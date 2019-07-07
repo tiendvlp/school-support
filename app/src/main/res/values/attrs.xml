@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DrawableCheckBox">
+        <attr name="checked_background" format="reference"/>
+        <attr name="unchecked_background" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="DrawableRadioButton">
+        <attr name="checked_bg" format="reference"/>
+        <attr name="unchecked_bg" format="reference"/>
+    </declare-styleable>
+
+</resources>
